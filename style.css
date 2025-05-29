@@ -32,7 +32,7 @@ button {
   margin: 0 auto;
   padding: 10px 20px;
   background-color: rgb(227, 238, 10), 245, 161;
-  color: #131313;
+  color: #000000;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -43,15 +43,15 @@ button:hover {
 }
 
 input[type="text"] {
-  width: 300px;
+  width: 410px;
   padding: 10px;
   font-size: 16px;
-  border: 2px solid #ccc;
+  border: 2px solid #222222;
   border-radius: 5px;
   outline: none;
-  transition: border-color 0.3s ease;
+  transition: border-color 0.3s ease-in-out;
 }
 
 input[type="text"]:focus {
-  border-color: #007BFF; /* Highlight when focused */
+  border-color: #000000; 
 }
