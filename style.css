@@ -8,7 +8,7 @@ height: 100vh;
   max-width: 500px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #66ebf0;
+  background-color: #75ade4;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(198, 222, 60, 0.2);
 }
@@ -32,7 +32,6 @@ button {
   display: block;
   margin: 0 auto;
   padding: 10px 20px;
-  background-color: rgb(227, 238, 10), 245, 161;
   color: #000000;
   border: none;
   border-radius: 5px;

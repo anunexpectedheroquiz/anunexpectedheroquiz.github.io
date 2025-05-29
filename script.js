@@ -7,6 +7,10 @@ const quizData = [
     question: "Question 2: Do you ever miss your old friends? If so, how much on a scale from 1-10.",
     type: "text",
   },
+  {
+    question: "Question 3: Who do you look up to as an idol? It could be a famous figure, relative, eccetera.",
+    type: "text",
+  },
 ];
 
 const questionElement = document.getElementById("question");
