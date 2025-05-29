@@ -63,5 +63,4 @@ function showResult() {
   document.getElementById("quiz").innerHTML = resultHTML;
 }
 
-// Initialize first question
 showQuestion();
