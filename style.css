@@ -41,3 +41,17 @@ button {
 button:hover {
   background-color: #8f8d8d;
 }
+
+input[type="text"] {
+  width: 300px;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #007BFF; /* Highlight when focused */
+}
