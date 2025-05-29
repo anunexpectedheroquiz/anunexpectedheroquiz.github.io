@@ -1,6 +1,7 @@
 body {
   font-family: Arial, sans-serif;
  background: linear-gradient(to bottom, #bfa243, #BFBF70, #929969);
+height: 100vh;
 }
 
 #quiz {
