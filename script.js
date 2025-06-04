@@ -1,17 +1,15 @@
 const quizData = [
-  {
-    question: "Question 1: Do you have any hobbies other than stargazing?",
-    type: "text",
-  },
-  {
-    question: "Question 2: Do you ever miss your old friends? If so, how much on a scale from 1-10.",
-    type: "text",
-  },
-  {
-    question: "Question 3: Who do you look up to as an idol? It could be a famous figure, relative, eccetera.",
-    type: "text",
-  },
-];
+    {
+      question: "What was the name of the grumpy army vereran?",
+      options: ["A", "B", "C", "D"],
+      answer: "A"
+    },
+    {
+      question: "What is the largest planet in our solar system?",
+      options: ["Jupiter", "Saturn", "Mars", "Earth"],
+      answer: "Jupiter"
+    },
+  ];
 
 const questionElement = document.getElementById("question");
 const optionsElement = document.getElementById("options");
