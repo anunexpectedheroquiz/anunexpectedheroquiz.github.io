@@ -1,15 +1,15 @@
 const quizData = [
-    {
-      question: "What was the name of the grumpy army vereran?",
-      options: ["A", "B", "C", "D"],
-      answer: "A"
-    },
-    {
-      question: "What is the largest planet in our solar system?",
-      options: ["Jupiter", "Saturn", "Mars", "Earth"],
-      answer: "Jupiter"
-    },
-  ];
+  {
+    question: "What was the name of the grumpy army veteran?",
+    options: ["Frank", "George", "Hank", "Walter"],
+    answer: "Frank"
+  },
+  {
+    question: "What is the largest planet in our solar system?",
+    options: ["Jupiter", "Saturn", "Mars", "Earth"],
+    answer: "Jupiter"
+  }
+];
 
 const questionElement = document.getElementById("question");
 const optionsElement = document.getElementById("options");
@@ -23,24 +23,32 @@ function showQuestion() {
   questionElement.innerText = question.question;
 
   optionsElement.innerHTML = "";
+  question.options.forEach(option => {
+    const label = document.createElement("label");
+    const radio = document.createElement("input");
+    radio.type = "radio";
+    radio.name = "option";
+    radio.value = option;
 
-  if (question.type === "text") {
-    const input = document.createElement("input");
-    input.type = "text";
-    input.id = "userInput";
-    optionsElement.appendChild(input);
-  }
+    label.appendChild(radio);
+    label.appendChild(document.createTextNode(option));
+    optionsElement.appendChild(label);
+    optionsElement.appendChild(document.createElement("br"));
+  });
 }
 
 submitButton.addEventListener("click", () => {
-  const input = document.getElementById("userInput");
+  const selectedOption = document.querySelector('input[name="option"]:checked');
 
-  if (input) {
-    userAnswers.push({
-      question: quizData[currentQuestion].question,
-      answer: input.value.trim()
-    });
+  if (!selectedOption) {
+    alert("Please select an option before continuing.");
+    return;
   }
+
+  userAnswers.push({
+    question: quizData[currentQuestion].question,
+    answer: selectedOption.value
+  });
 
   currentQuestion++;
 
@@ -52,9 +60,9 @@ submitButton.addEventListener("click", () => {
 });
 
 function showResult() {
-  let resultHTML = "<h1>Form Completed!</h1><h2>Your Answers:</h2><ul>";
+  let resultHTML = "<h1>Quiz Completed!</h1><h2>Your Answers:</h2><ul>";
   userAnswers.forEach(({ question, answer }) => {
-    resultHTML += `<li><strong>${question}</strong><br>${answer}</li>`;
+    resultHTML += `<li><strong>${question}</strong><br>Answer: ${answer}</li>`;
   });
   resultHTML += "</ul>";
 
