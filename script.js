@@ -73,6 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
     totalScore += score;
 
     userAnswers.push({
-      question: quizData[currentQuestion].question,
-      selectedAnswer: selectedOption ? selectedOption.value : "No answer",
-      correctAnswer: quizData
+  question: quizData[currentQuestion].question,
+  selectedAnswer: selectedOption ? selectedOption.value : "No answer",
+  correctAnswer: quizData[currentQuestion].answer
+});
